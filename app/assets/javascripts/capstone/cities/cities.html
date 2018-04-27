@@ -1,0 +1,18 @@
+<div>
+	<h3>Cities</h3>
+	<span>(from captone/cities/cities.html)</span>
+	<form>
+		<div>
+			<label class="form-group">Name:</label>
+			<input name="name" ng-model="citiesVM.city.name" required="required" class="form-group"/>
+			<button ng-if="!citiesVM.city.id" type="submit" ng-click="citiesVM.create()" class="form-group">Create City</button>
+			<button ng-if="citiesVM.city.id" type="submit" ng-click="citiesVM.update()" class="form-group">Update City</button>
+			<button ng-if="citiesVM.city.id" type="submit" ng-click="citiesVM.remove()" class="form-group">Delete City</button>
+		</div>
+	</form>
+	<ul>
+		<li ng-repeat="city in citiesVM.cities | filter: {name: '!Baltimore'} | orderBy:'name'">
+			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>
+		</li>
+	</ul>
+</div>

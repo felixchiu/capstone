@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 
 gem 'rails-api'
+gem 'sass-rails', '~>5.0.6'
+gem 'uglifier'
+gem 'coffee-rails', '~>4.1', '>=4.1.0'
+gem 'jquery-rails', '~>4.2', '>=4.2.1'
 gem 'jbuilder', '~> 2.0', '>=2.6.0'
 
 group :development do
@@ -20,6 +24,12 @@ gem 'puma'
 gem 'pg', "~> 0.19", '>=0.19.0'
 gem 'mongoid'
 
+source 'https://rails-assets.org' do
+	gem 'rails-assets-bootstrap', '~>3.3', '>=3.3.7'
+	gem 'rails-assets-angular', '~>1.5', '>=1.5.8'
+	gem 'rails-assets-angular-ui-router', '~>0.3', '>=0.3.1'
+	gem 'rails-assets-angular-resource', '~>1.5', '>=1.5.8'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
