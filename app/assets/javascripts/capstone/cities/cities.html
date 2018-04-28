@@ -11,7 +11,7 @@
 		</div>
 	</form>
 	<ul>
-		<li ng-repeat="city in citiesVM.cities | filter: {name: '!Baltimore'} | orderBy:'name'">
+		<li ng-repeat="city in citiesVM.cities | orderBy:'name'">
 			<a ng-click="citiesVM.edit(city)">{{city.name}}</a>
 		</li>
 	</ul>
